@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.picodiploma.kampitaid.ui.fragments.HomeKampitaFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home_kampita" >
+        <action
+            android:id="@+id/action_homeFragment_to_listFragment"
+            app:destination="@id/listFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_listSearchFragment"
+            app:destination="@id/listSearchFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.picodiploma.kampitaid.ui.fragments.ListKampitaFragment"
+        android:label="fragment_list"
+        tools:layout="@layout/fragment_list_kampita" >
+        <action
+            android:id="@+id/action_listFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/listSearchFragment"
+        android:name="com.picodiploma.kampitaid.ui.fragments.ListSearchFragment"
+        android:label="fragment_list_search"
+        tools:layout="@layout/fragment_list_search" >
+        <action
+            android:id="@+id/action_listSearchFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/homeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailKampitaFragment"
+        android:name="com.picodiploma.kampitaid.ui.fragments.DetailKampitaFragment"
+        android:label="fragment_detail_kampita"
+        tools:layout="@layout/fragment_detail_kampita" />
+</navigation>

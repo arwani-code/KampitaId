@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/arwan/Desktop/bangkit/project-capstone-product/app/src/main/res/drawable/bottom_rounded_background.xml" value="0.2125" />
+        <entry key="..\:/Users/arwan/Desktop/bangkit/project-capstone-product/app/src/main/res/drawable/ic_line_horizontal_.xml" value="0.2125" />
+        <entry key="..\:/Users/arwan/Desktop/bangkit/project-capstone-product/app/src/main/res/layout/activity_main.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/arwan/Desktop/bangkit/project-capstone-product/app/src/main/res/layout/fragment_detail_kampita.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/arwan/Desktop/bangkit/project-capstone-product/app/src/main/res/layout/fragment_home_kampita.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/arwan/Desktop/bangkit/project-capstone-product/app/src/main/res/layout/fragment_list_kampita.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/arwan/Desktop/bangkit/project-capstone-product/app/src/main/res/layout/fragment_list_search.xml" value="0.2033514492753623" />
+        <entry key="..\:/Users/arwan/Desktop/bangkit/project-capstone-product/app/src/main/res/layout/list_kampita_item.xml" value="0.2033514492753623" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

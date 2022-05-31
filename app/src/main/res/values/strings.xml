@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">kampitaid</string>
+    <string name="text_home">Kami mendeteksi gempa di daerah di sekitar anda</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="btn_text">Next</string>
+    <string name="text_home_light">Kami menyinkronkan data dari meteorologi, klimatologi dan ahli geofisika</string>
+    <string name="img_maps_bottom">img_maps_bottom</string>
+    <string name="earthquake_list">EARTHQUAKE LIST</string>
+    <string name="arrow_back">arrow_back</string>
+    <string name="btn_search">btn_search</string>
+    <string name="search_by_city">Search by city</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="earthquake_text">48 km dari banten, jawa barat</string>
+    <string name="published_date">29 Mei 2022 || 21:00</string>
+    <string name="magnitude">M 6.5</string>
+    <string name="Magnitude">Magnitude</string>
+</resources>
