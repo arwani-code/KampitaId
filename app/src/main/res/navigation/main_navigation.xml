@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.picodiploma.kampitaid.ui.fragments.HomeKampitaFragment"
-        android:label="fragment_home"
+        android:label="Home"
         tools:layout="@layout/fragment_home_kampita" >
         <action
             android:id="@+id/action_homeFragment_to_listFragment"
@@ -21,7 +21,7 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.picodiploma.kampitaid.ui.fragments.ListKampitaFragment"
-        android:label="fragment_list"
+        android:label="Earthquake List"
         tools:layout="@layout/fragment_list_kampita" >
         <action
             android:id="@+id/action_listFragment_to_homeFragment"
@@ -29,11 +29,14 @@
             app:launchSingleTop="true"
             app:popUpTo="@+id/homeFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_listFragment_to_detailKampitaFragment"
+            app:destination="@id/detailKampitaFragment" />
     </fragment>
     <fragment
         android:id="@+id/listSearchFragment"
         android:name="com.picodiploma.kampitaid.ui.fragments.ListSearchFragment"
-        android:label="fragment_list_search"
+        android:label="Search"
         tools:layout="@layout/fragment_list_search" >
         <action
             android:id="@+id/action_listSearchFragment_to_homeFragment"
@@ -41,10 +44,20 @@
             app:launchSingleTop="true"
             app:popUpTo="@+id/homeFragment"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_listSearchFragment_to_detailKampitaFragment"
+            app:destination="@id/detailKampitaFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailKampitaFragment"
         android:name="com.picodiploma.kampitaid.ui.fragments.DetailKampitaFragment"
-        android:label="fragment_detail_kampita"
-        tools:layout="@layout/fragment_detail_kampita" />
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail_kampita" >
+        <argument
+            android:name="quake"
+            app:argType="com.picodiploma.kampitaid.data.local.entity.QuakeEntity" />
+        <action
+            android:id="@+id/action_detailKampitaFragment_to_listFragment2"
+            app:destination="@id/listFragment" />
+    </fragment>
 </navigation>

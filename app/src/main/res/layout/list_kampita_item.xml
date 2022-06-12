@@ -6,9 +6,11 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     app:cardCornerRadius="4dp"
-    app:cardElevation="4dp"
-    app:cardMaxElevation="4dp"
-    app:cardUseCompatPadding="true">
+    android:backgroundTint="@color/teal_700"
+    app:cardElevation="2dp"
+    app:cardMaxElevation="1dp"
+    app:cardUseCompatPadding="true"
+    android:id="@+id/rowItem">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -22,14 +24,14 @@
             app:layout_constraintGuide_end="302dp" />
 
         <TextView
-            android:id="@+id/img_poster"
+            android:id="@+id/tvMagnitude"
             android:layout_width="75dp"
             android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
-            android:src="@color/teal_200"
             android:text="@string/magnitude"
-            android:textColor="@color/blue_500"
+            android:textColor="#9EB23B"
             android:textSize="23sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_horizontal2"
@@ -37,7 +39,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_item_title"
+            android:id="@+id/tvItemTitle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -47,21 +49,23 @@
             android:gravity="start"
             android:maxLines="3"
             android:textSize="16sp"
+            android:textColor="@color/green_500"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/img_poster"
+            app:layout_constraintStart_toEndOf="@+id/tvMagnitude"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/earthquake_text" />
 
         <TextView
-            android:id="@+id/tv_item_published_date"
+            android:id="@+id/tvItemPublished"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:gravity="start"
             android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/tv_item_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_item_title"
+            android:textColor="@color/green_500"
+            app:layout_constraintStart_toStartOf="@+id/tvItemTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemTitle"
             tools:text="@string/published_date" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
