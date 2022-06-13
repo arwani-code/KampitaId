@@ -10,6 +10,6 @@ import retrofit2.http.Query
 interface ApiService {
 
     @GET("/")
-    suspend fun getLisQuake(): SeismicResponse
+    suspend fun getLisQuake(): SeismicDataResponse
 
 }

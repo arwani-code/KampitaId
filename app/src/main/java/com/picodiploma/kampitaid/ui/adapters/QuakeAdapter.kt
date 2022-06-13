@@ -33,9 +33,8 @@ class QuakeAdapter: ListAdapter<QuakeEntity, QuakeAdapter.MyViewHolder>(DIFF_CAL
     inner class MyViewHolder(private val binding: ListKampitaItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(quake: QuakeEntity){
             binding.apply {
-                tvMagnitude.text = "M ${quake.magnitude}"
-                tvItemTitle.text = quake.station_location
-                tvItemPublished.text =  DateFormatter.formatDate(quake.publishedAt.toString())
+                tvItemPublished.text =  "Tanggal: ${quake.publishedAt}"
+                tvMagnitude.text = "Jarak radius: ${quake.radius}"
 
                 rowItem.setOnClickListener {
                     val action = ListKampitaFragmentDirections.actionListFragmentToDetailKampitaFragment(quake)
@@ -46,7 +45,6 @@ class QuakeAdapter: ListAdapter<QuakeEntity, QuakeAdapter.MyViewHolder>(DIFF_CAL
             itemView.setOnClickListener {
                 onItemClickDetail.onItemClicked(quake)
             }
-
 
         }
     }

@@ -10,7 +10,7 @@ interface QuakeDao {
     @Query("SELECT * FROM quake_table ORDER BY id ASC")
     fun getListQuake(): LiveData<List<QuakeEntity>>
 
-    @Query("SELECT * FROM quake_table WHERE station LIKE :title")
+    @Query("SELECT * FROM quake_table WHERE published_at LIKE :title")
     fun getSearchQuake(title: String?): LiveData<List<QuakeEntity>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)

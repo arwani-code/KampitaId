@@ -3,6 +3,7 @@ package com.picodiploma.kampitaid.ui.fragments
 import android.Manifest
 import android.annotation.SuppressLint
 import android.annotation.TargetApi
+import android.app.AlertDialog
 import android.app.PendingIntent
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -19,6 +20,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.google.android.gms.location.Geofence
 import com.google.android.gms.location.GeofencingClient
@@ -68,7 +70,7 @@ class DetailKampitaFragment : Fragment() {
         mMap.mapType = GoogleMap.MAP_TYPE_HYBRID
 
         val location = LatLng(args.quake.latitude!!, args.quake.longitude!!)
-        mMap.addMarker(MarkerOptions().position(location).title("Location: ${args.quake.station_location}"))
+        mMap.addMarker(MarkerOptions().position(location).title("Location"))
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15f))
 
         mMap.addCircle(
@@ -99,6 +101,12 @@ class DetailKampitaFragment : Fragment() {
             childFragmentManager.findFragmentById(R.id.mapDetail) as SupportMapFragment?
         mapFragment?.getMapAsync(callback)
 
+        val alertBuilder = AlertDialog.Builder(requireContext())
+        alertBuilder.setPositiveButton("Ok") { _, _ ->}
+        alertBuilder.setTitle("P_wafe terdeteksi")
+        alertBuilder.setMessage("Sebuah getaran terdeteksi dengan radius ${args.quake.radius}")
+        alertBuilder.create().show()
+
         setupInfoItem()
     }
 
@@ -106,12 +114,12 @@ class DetailKampitaFragment : Fragment() {
 
         binding?.apply {
 
-            tvMagnitude.text = args.quake.magnitude.toString()
-            tvItemInfo.text = args.quake.station_location
+            tvMagnitude.text = args.quake.radius.toString()
+            tvItemPublished.text = args.quake.publishedAt.toString()
 
             btnShare.setOnClickListener {
-                val message = "Gempa dengan sekala ${args.quake.magnitude} magnitudo telah terjadi sekitar " +
-                        "pukul publishedAt \n ~info dari KampitaId"
+                val message = "Gempa terdeteksi dengan radius ${args.quake.radius} telah terjadi sekitar " +
+                        "pada tanggal ${args.quake.publishedAt} \n ~info dari KampitaId"
                 val intent = Intent()
                 intent.action = Intent.ACTION_SEND
                 intent.putExtra(Intent.EXTRA_TEXT, message)
