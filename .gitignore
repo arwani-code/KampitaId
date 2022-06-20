@@ -13,3 +13,6 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+ML_pipeline/Data/
+ML_model/Data/
