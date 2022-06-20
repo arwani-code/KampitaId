@@ -18,7 +18,7 @@ object ApiConfig {
             .addInterceptor(loggingInterceptor)
             .build()
         val retrofit: Retrofit = Retrofit.Builder()
-            .baseUrl("https://earthquake-api-n7or6l6osq-an.a.run.app")
+            .baseUrl("https://earthquake-tf-api-n7or6l6osq-an.a.run.app")
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

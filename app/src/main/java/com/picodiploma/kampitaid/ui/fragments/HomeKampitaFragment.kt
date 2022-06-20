@@ -57,7 +57,7 @@ class HomeKampitaFragment : Fragment() {
                                         it1, it)
                                 } }
                             location?.let { MarkerOptions().position(it).title(
-                                "Location: ${item.station_location}"
+                                "Location"
                             ) }
                                 ?.let { mMap.addMarker(it) }
                             location?.let { CameraUpdateFactory.newLatLng(it) }

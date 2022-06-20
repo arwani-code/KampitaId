@@ -67,10 +67,6 @@ class ListSearchFragment : Fragment() {
 
     private fun setSelectedQuake(quake: QuakeEntity) {
         val action = ListSearchFragmentDirections.actionListSearchFragmentToDetailKampitaFragment(quake)
-        action.quake.elevation = quake.elevation
-        action.quake.station = quake.station
-        action.quake.magnitude = quake.magnitude
-        action.quake.station_location = quake.station_location
         action.quake.latitude = quake.latitude
         action.quake.longitude = quake.longitude
         action.quake.publishedAt = quake.publishedAt

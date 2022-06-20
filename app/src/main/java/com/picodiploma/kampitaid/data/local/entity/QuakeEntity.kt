@@ -14,18 +14,6 @@ data class QuakeEntity(
     @field:ColumnInfo(name = "id")
     var id: Int = 0,
 
-    @field:ColumnInfo(name = "station")
-    var station: String?,
-
-    @field:ColumnInfo(name = "station_location")
-    var station_location: String?,
-
-    @field:ColumnInfo(name = "elevation")
-    var elevation: Double?,
-
-    @field:ColumnInfo(name = "magnitude")
-    var magnitude: Double? = 0.0,
-
     @field:ColumnInfo(name = "lat")
     var latitude: Double?,
 
@@ -36,5 +24,5 @@ data class QuakeEntity(
     var radius: Double? = 0.0,
 
     @field:ColumnInfo(name = "published_at")
-    var publishedAt: String? = null,
+    var publishedAt: String?,
 ): Parcelable
